@@ -42,6 +42,9 @@ class SlideLimitationValidator(ABC):
         self.age = age
         self.weight = weight
         self.height = height
+    @abstractmethod
+    def validate(self):
+        pass
 
 
 class ChildrenSlideLimitationValidator(SlideLimitationValidator):
