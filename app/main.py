@@ -20,7 +20,7 @@ class IntegerRange:
             if self.min_amount <= value <= self.max_amount:
                 return setattr(instance, self.name, value)
             else:
-                raise ValueError("The value must be within the acceptable range")
+                raise ValueError("Value must be within the acceptable range")
 
 
 class Visitor:
