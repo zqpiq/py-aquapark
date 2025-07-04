@@ -15,12 +15,12 @@ class IntegerRange:
 
     def __set__(self, instance: Any, value: Any) -> None:
         if not isinstance(value, int):
-            raise TypeError
+            raise TypeError("The object must be of type int")
         else:
             if self.min_amount <= value <= self.max_amount:
                 return setattr(instance, self.name, value)
             else:
-                raise ValueError
+                raise ValueError("The value must be within the acceptable range")
 
 
 class Visitor:
