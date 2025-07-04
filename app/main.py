@@ -1,4 +1,4 @@
-from abc import ABC
+from abc import ABC, abstractmethod
 from typing import Any
 
 
@@ -42,8 +42,9 @@ class SlideLimitationValidator(ABC):
         self.age = age
         self.weight = weight
         self.height = height
+
     @abstractmethod
-    def validate(self):
+    def validate(self) -> None:
         pass
 
 
